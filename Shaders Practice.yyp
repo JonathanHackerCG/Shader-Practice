@@ -8,6 +8,7 @@
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":3,},
     {"id":{"name":"bkg_testB","path":"sprites/bkg_testB/bkg_testB.yy",},"order":1,},
     {"id":{"name":"bkg_testA","path":"sprites/bkg_testA/bkg_testA.yy",},"order":0,},
+    {"id":{"name":"E_shd_noise","path":"shaders/E_shd_noise/E_shd_noise.yy",},"order":4,},
     {"id":{"name":"B_shd_blackwhite","path":"shaders/B_shd_blackwhite/B_shd_blackwhite.yy",},"order":1,},
     {"id":{"name":"spr_testing","path":"sprites/spr_testing/spr_testing.yy",},"order":4,},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"order":0,},

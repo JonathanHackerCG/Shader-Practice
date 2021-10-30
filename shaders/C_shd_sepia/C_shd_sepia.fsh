@@ -6,8 +6,6 @@ varying vec4 v_vColour;
 
 void main()
 {
-    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
-		
 		vec4 Color = texture2D(gm_BaseTexture, v_vTexcoord);			//Cache the color of the pixel.
 		vec3 Luma = vec3(0.299, 0.587, 0.114);										//Brightness correction.
 		float bw = dot(Color.rbg, Luma);													//Black and White result.
