@@ -30,14 +30,17 @@ float noise(vec2 p)
 
 void main()
 {
-	//Combine 5 layers of noise at different scale factors.
-	float n = (noise(v_vPosition / 8.000) * 0.2) +
-						(noise(v_vPosition / 16.00) * 0.2) +
-						(noise(v_vPosition / 32.00) * 0.2) +
-						(noise(v_vPosition / 64.00) * 0.2) +
-						(noise(v_vPosition / 128.0) * 0.2);
+	//Combine 8 layers of noise at different scale factors.
+	float n = (noise(v_vPosition / 4.000) * 0.1) +
+						(noise(v_vPosition / 8.000) * 0.1) +
+						(noise(v_vPosition / 16.00) * 0.1) +
+						(noise(v_vPosition / 32.00) * 0.1) +
+						(noise(v_vPosition / 64.00) * 0.1) +
+						(noise(v_vPosition / 128.0) * 0.1) +
+						(noise(v_vPosition / 256.0) * 0.2) +
+						(noise(v_vPosition / 512.0) * 0.2);
 	
 	//Output the color of each pixel modified by the noise.
 	vec4 Color = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
-	gl_FragColor = Color * vec4(vec3(n), 1.0);
+	gl_FragColor = Color + vec4(vec3(n) * 0.3, 0.0);
 }
