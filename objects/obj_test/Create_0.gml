@@ -1,12 +1,16 @@
 /// @description Initialize Variables
 event_inherited();
 
+application_surface_draw_enable(false);
+application_surface_enable(false);
+main_surface = surface_create(1200, 676);
+
 sprites = array_create(0, 0); //Array for swapping test sprites.
 array_push(sprites, bkg_testA, bkg_testB, bkg_testC, bkg_testD);
 s_index = 0;
 
 effects = array_create(0, 0); //Array for swapping effects.
-array_push(effects, A_shd_intensify, B_shd_blackwhite, C_shd_sepia, D_shd_invert, E_shd_noise);
+array_push(effects, A_shd_intensify, B_shd_blackwhite, C_shd_sepia, D_shd_invert, E_shd_noise, F_shd_blur_radial);
 e_index = 0;
 
 active = true;

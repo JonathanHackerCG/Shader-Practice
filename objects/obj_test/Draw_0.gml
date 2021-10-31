@@ -1,14 +1,11 @@
 /// @description Drawing Test Sprites
 event_inherited();
 
-if (active)
+if (!surface_exists(main_surface))
 {
-	//Drawing the sprite with a shader.
-	shader_set(effect);
-	draw_sprite(sprite, 0, 0, 0);
-	shader_reset();
+	main_surface = surface_create(1200, 676);
 }
-else
-{
-	draw_sprite(sprite, 0, 0, 0);
-}
+
+surface_set_target(main_surface);
+draw_sprite(sprite, 0, 0, 0);
+surface_reset_target();
