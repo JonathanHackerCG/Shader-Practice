@@ -10,7 +10,12 @@ array_push(sprites, bkg_testA, bkg_testB, bkg_testC, bkg_testD);
 s_index = 0;
 
 effects = array_create(0, 0); //Array for swapping effects.
-array_push(effects, A_shd_intensify, B_shd_blackwhite, C_shd_sepia, D_shd_invert, E_shd_noise, F_shd_blur_radial);
+array_push(effects, A_shd_intensify, B_shd_blackwhite, C_shd_sepia, D_shd_invert,
+	E_shd_noise, F_shd_blur_radial, G_shd_blur_motion, H_shd_blur_gaussian);
 e_index = 0;
 
 active = true;
+
+F_pos = shader_get_uniform(F_shd_blur_radial, "pos");
+G_pos = shader_get_uniform(G_shd_blur_motion, "pos");
+H_size = shader_get_uniform(H_shd_blur_gaussian, "size");

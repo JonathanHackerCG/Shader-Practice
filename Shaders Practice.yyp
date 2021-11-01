@@ -3,6 +3,8 @@
     {"id":{"name":"bkg_testC","path":"sprites/bkg_testC/bkg_testC.yy",},"order":2,},
     {"id":{"name":"C_shd_sepia","path":"shaders/C_shd_sepia/C_shd_sepia.yy",},"order":2,},
     {"id":{"name":"D_shd_invert","path":"shaders/D_shd_invert/D_shd_invert.yy",},"order":3,},
+    {"id":{"name":"H_shd_blur_gaussian","path":"shaders/H_shd_blur_gaussian/H_shd_blur_gaussian.yy",},"order":7,},
+    {"id":{"name":"G_shd_blur_motion","path":"shaders/G_shd_blur_motion/G_shd_blur_motion.yy",},"order":6,},
     {"id":{"name":"bkg_testD","path":"sprites/bkg_testD/bkg_testD.yy",},"order":3,},
     {"id":{"name":"A_shd_intensify","path":"shaders/A_shd_intensify/A_shd_intensify.yy",},"order":0,},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":3,},
