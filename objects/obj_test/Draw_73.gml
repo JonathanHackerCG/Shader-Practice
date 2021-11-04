@@ -18,6 +18,9 @@ if (active)
 		case H_shd_blur_gaussian:
 			shader_set_uniform_f(H_size, room_width, room_height, 16);
 			break;
+		case I_shd_ripple:
+			shader_set_uniform_f(I_time, current_time / 1000);
+			break;
 		default:
 	}
 	
