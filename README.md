@@ -17,7 +17,8 @@ gl_FragColor = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
 gl_FragColor.rgb *= vec3(1.5, 1.5, 1.5);
 ```
 
-01 <img src="/gitassets/Base-4.png" width="48%"> <img src="/gitassets/Shd-1-4.png" width="48%">
+01<br>
+<img src="/gitassets/Base-4.png" width="48%"> <img src="/gitassets/Shd-1-4.png" width="48%"><br>
 
 ### Effect 02: Black and White
 Makes the image grayscale, by calculating the dot-product with a brightness correction vector.
@@ -32,8 +33,10 @@ The luma vector chosen is explained [here](https://en.wikipedia.org/wiki/HSL_and
 
 This shader can be modified to create filters for certain colors, such as sepia-tone which is included in Effect 03.
 
-02 <img src="/gitassets/Base-2.png" width="48%"> <img src="/gitassets/Shd-2-2.png" width="48%">
-03 <img src="/gitassets/Base-1.png" width="48%"> <img src="/gitassets/Shd-3-1.png" width="48%">
+02<br>
+<img src="/gitassets/Base-2.png" width="48%"> <img src="/gitassets/Shd-2-2.png" width="48%"><br>
+03<br>
+<img src="/gitassets/Base-1.png" width="48%"> <img src="/gitassets/Shd-3-1.png" width="48%"><br>
 
 ### Effect 04: Invert Colors
 Inverts the colors of the image, simply by negating the RGB component.
@@ -43,19 +46,24 @@ vec4 Color = texture2D(gm_BaseTexture, v_vTexcoord);
 gl_FragColor = vec4(vec3(1.0) - Color.rgb, Color.a);
 ```
 
-04 <img src="/gitassets/Base-3.png" width="48%"> <img src="/gitassets/Shd-4-3.png" width="48%">
+04<br>
+<img src="/gitassets/Base-3.png" width="48%"> <img src="/gitassets/Shd-4-3.png" width="48%"><br>
 
 ### Effect 05: Random Noise
 Generates a layer of random interpolated noise. The color is adjusted so it looks like fog. To create a smooth noise texture, it requires sampling and interpolating random values over many iterations. Please view the source code for details.
 
-05 <img src="/gitassets/Base-2.png" width="48%"> <img src="/gitassets/Shd-5-2.png" width="48%">
+05<br>
+<img src="/gitassets/Base-2.png" width="48%"> <img src="/gitassets/Shd-5-2.png" width="48%"><br>
 
 ### Effect 08: Gaussian Blur
 Blurs the image, by combining the average of all the points in an area around each point. The quality can be increased by sampling more points. Gaussian blur is effectively a combination of radial blur and linear blur, which are shown in Effect 06 and Effect 07.
 
-06 <img src="/gitassets/Base-1.png" width="48%"> <img src="/gitassets/Shd-6-1.png" width="48%">
-07 <img src="/gitassets/Base-4.png" width="48%"> <img src="/gitassets/Shd-7-4.png" width="48%">
-08 <img src="/gitassets/Base-3.png" width="48%"> <img src="/gitassets/Shd-8-3.png" width="48%">
+06<br>
+<img src="/gitassets/Base-1.png" width="48%"> <img src="/gitassets/Shd-6-1.png" width="48%"><br>
+07<br>
+<img src="/gitassets/Base-4.png" width="48%"> <img src="/gitassets/Shd-7-4.png" width="48%"><br>
+08<br>
+<img src="/gitassets/Base-3.png" width="48%"> <img src="/gitassets/Shd-8-3.png" width="48%"><br>
 
 ### Effect 09: Ripple
 Causes ripple distortions in the image. Uses a time uniform to allow the ripple to be animated. (Animation not shown here). The basis of the ripple effect is a cosine wave, modified by defined wavlength, amplitude, and time uniform.
@@ -65,7 +73,8 @@ vec2 Coord = v_vTexcoord + vec2(cos((v_vTexcoord.y * wavl) + (time * Pi)) / ampl
 gl_FragColor = v_vColour * texture2D( gm_BaseTexture, Coord);
 ```
 
-09 <img src="/gitassets/Base-2.png" width="48%"> <img src="/gitassets/Shd-9-2.png" width="48%">
+09<br>
+<img src="/gitassets/Base-2.png" width="48%"> <img src="/gitassets/Shd-9-2.png" width="48%"><br>
 
 ## Conclusion
 This project served primarily as practice for myself. First, I learned the basics of fragment shaders in GLSL, and applied them to a GML game project. Additionally, I became more familiar with markup and Github, as I wrote this README. I will continue to write more shaders in the future, and I may add them to this project as I continue, to serve as a showcase for my understanding of GLSL.
